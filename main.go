@@ -74,11 +74,10 @@ func main() {
 					}
 					reserveQueue[rqInsIndex] = lastBall
 					rqInsIndex = (rqInsIndex + 1) % ballCount
-					if minutesToRepeat == 156751200 {
-						fmt.Print("ehhh")
-					}
-					if ballsRepeat(reserveQueue, ballCount){
-						break
+					if rqRemIndex == 0 && rqInsIndex == 0 {
+						if ballsRepeat(reserveQueue, ballCount){
+							break
+						}
 					}
 				}
 				hsIndex = (hsIndex + 1) % HourCap
